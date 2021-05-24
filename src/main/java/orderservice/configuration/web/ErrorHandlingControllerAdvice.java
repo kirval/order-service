@@ -1,6 +1,6 @@
 package orderservice.configuration.web;
 
-import orderservice.common.dto.ErrorResponse;
+import orderservice.dto.ErrorResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
