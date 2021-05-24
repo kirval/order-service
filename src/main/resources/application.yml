@@ -1,0 +1,27 @@
+app:
+  db:
+    name: ${OS_DB:order-service-db}
+
+spring:
+  #
+  # DATASOURCE CONFIG
+  #
+  datasource:
+    url: jdbc:h2:file:./.db/data/${app.db.name};DB_CLOSE_DELAY=-1;AUTO_SERVER=TRUE
+    driver-class-name: org.h2.Driver
+
+  #
+  # FLYWAY CONFIG
+  #
+  flyway:
+    enabled: true
+    url: jdbc:h2:file:./.db/data/${app.db.name};DB_CLOSE_DELAY=-1;AUTO_SERVER=TRUE
+
+  #
+  # HIBERNATE CONFIG
+  #
+  jpa:
+    database: h2
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: none
