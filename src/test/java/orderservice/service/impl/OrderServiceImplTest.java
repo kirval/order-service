@@ -1,4 +1,4 @@
-package orderservice.service;
+package orderservice.service.impl;
 
 import orderservice.dto.OrderDtoIn;
 import orderservice.dto.OrderDtoOut;
@@ -12,11 +12,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
 @Transactional
-@Sql("OrderServiceTest.sql")
-class OrderServiceTest {
+@Sql("OrderServiceImplTest.sql")
+class OrderServiceImplTest {
 
     @Autowired
-    private OrderService orderService;
+    private OrderServiceImpl orderService;
 
     @Test
     void placeOrderTest() {

@@ -1,4 +1,4 @@
-package orderservice.service;
+package orderservice.service.impl;
 
 import orderservice.dto.CustomerDto;
 import orderservice.model.Customer;
@@ -13,11 +13,11 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @SpringBootTest
 @Transactional
-@Sql("CustomerServiceTest.sql")
-class CustomerServiceTest {
+@Sql("CustomerServiceImplTest.sql")
+class CustomerServiceImplTest {
 
     @Autowired
-    private CustomerService customerService;
+    private CustomerServiceImpl customerService;
 
     @Test
     void addNewCustomerTest() {

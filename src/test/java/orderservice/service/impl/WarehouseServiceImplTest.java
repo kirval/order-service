@@ -1,4 +1,4 @@
-package orderservice.service;
+package orderservice.service.impl;
 
 import orderservice.model.Warehouse;
 import org.junit.jupiter.api.Test;
@@ -13,11 +13,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
 @Transactional
-@Sql("WarehousePersistenceAdapterTest.sql")
-class WarehouseServiceTest {
+@Sql("WarehouseServiceImplTest.sql")
+class WarehouseServiceImplTest {
 
     @Autowired
-    private WarehouseService warehouseService;
+    private WarehouseServiceImpl warehouseService;
 
     @Test
     void findWarehousesContainingProductTest() {
